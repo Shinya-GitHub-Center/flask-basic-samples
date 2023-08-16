@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Flask!!</title>
-</head>
-<body>
-    <p>Hello Flask!!</p>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Hello Flask Successfully Initiated...</h1>
+        <h2>Welcome to the {{ name }} page!!</h2>
+        <p><input type="button" value="Button" onclick="onButtonClick()" /></p>
+        <p><span id="pushButton">0</span></p>
+{% endblock %}
