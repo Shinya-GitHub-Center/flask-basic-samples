@@ -8,7 +8,7 @@
 - Your favorite CUI Terminal / Your favorite VSCode
 
 ## Get Started!!
-1. Download the souce code via zip or just `git clone` this repos
+1. Download the souce code via zip or just `git clone` this repos (please checkout to database branch)
 2. Rename the file `.env.sample` to `.env`
 3. On your terminal, move to the project's root directory (where `requirements.txt` exsists)
 4. Run the following commands
@@ -43,5 +43,5 @@ $ source .venv/bin/activate
 $ <any flask commands>
 ```
 
-## Reference Books
+## Reference Book
 https://www.shuwasystem.co.jp/book/9784798067964.html
