@@ -1,4 +1,4 @@
-# Basic samples for the study of Flask Development (venv - pip version)
+# (database branch) : Implementation of the very basic SQLite database
 
 ## Requirement
 - Any Linux Distribution (I have not tested with WSL on Windows...)
@@ -16,9 +16,18 @@
 $ python -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt
-$ flask run
 ```
 - Please make sure you are entering venv environment after running `source` command.
+
+## Setting up the database
+1. Run the following commands @ project's root directory (where requirements.txt exsists)
+```
+$ flask db init
+$ flask db migrate
+$ flask db upgrade 
+```
+2. Make sure `database` directory has been created, with the database file & migration folder generated under the database directory
+3. You should check how the table & columns has been created inside the `database.db` file. The easiest way is just install the SQLite3 Editor extension via VSCode. (I included VSCode recommendation using `extensions.json`)
 
 ## To finish today's your flask development
 ```
@@ -31,8 +40,8 @@ $ exit
 Run the following commands @ where `requirements.txt` exsists
 ```
 $ source .venv/bin/activate
-$ flask run
+$ <any flask commands>
 ```
 
-## Reference URL
-https://qiita.com/t-iguchi/items/f7847729631022a5041f
+## Reference Books
+https://www.shuwasystem.co.jp/book/9784798067964.html
