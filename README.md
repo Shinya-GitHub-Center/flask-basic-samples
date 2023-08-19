@@ -24,10 +24,11 @@ $ pip install -r requirements.txt
 ```
 $ flask db init
 $ flask db migrate
-$ flask db upgrade 
+$ flask db upgrade
 ```
 2. Make sure `database` directory has been created, with the database file & migration folder generated under the database directory
-3. You should check how the table & columns has been created inside the `database.db` file. The easiest way is just install the SQLite3 Editor extension via VSCode. (I included VSCode recommendation using `extensions.json`)
+3. You should check how the table & columns has been created inside the `database.db` file. The easiest way is just install 'SQLite3 Editor' extension via VSCode, then click `database.db` file from the VSCode explorer (I included VSCode recommendation using `extensions.json`)
+- You can change to 'posted' table from 'SELECT * FROM' section, where you can see the 4 columns - id, title, contents, and create_at
 
 ## To finish today's your flask development
 ```
