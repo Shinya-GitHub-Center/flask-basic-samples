@@ -12,8 +12,8 @@ db = SQLAlchemy()
 db.init_app(app)
 
 basedir = os.path.dirname(os.path.dirname(__file__))
-dbdir = basedir + '/database'
-Migrate(app, db, directory=dbdir)
+mgdir = basedir + '/database/migrations'
+Migrate(app, db, directory=mgdir)
 
 
 @app.route('/')
