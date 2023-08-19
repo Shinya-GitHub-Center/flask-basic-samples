@@ -1,3 +1,6 @@
+# for this flask project
+database/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
