@@ -9,8 +9,8 @@ from app.main import db
 crud = Blueprint(
     'crud',
     __name__,
-    template_folder='templates',
-    static_folder='static',
+    template_folder='templates_crud',
+    static_folder='static_crud',
 )
 
 
