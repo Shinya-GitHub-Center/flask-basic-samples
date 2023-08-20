@@ -6,3 +6,6 @@ dbdir = basedir + '/database'
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(dbdir, 'database.db')
 SECRET_KEY = os.urandom(10)
+
+USERNAME = 'admin'
+PASSWORD = '0000'

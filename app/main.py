@@ -20,3 +20,7 @@ Migrate(app, db, directory=mgdir)
 def index():
     name = 'index'
     return render_template('index.html', title='This is the index page', name=name)
+
+
+from app.crud.views import crud
+app.register_blueprint(crud)
