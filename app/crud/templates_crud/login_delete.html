@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="pad">
-    <h3>Login to the posting page</h3>
-    <form action="{{ url_for('crud.login') }}" method="POST" novalidate="novalidate">
+    <h3>Login to the deleting post page</h3>
+    <form action="{{ url_for('crud.login_del') }}" method="POST" novalidate="novalidate">
         {{form.csrf_token}}
         <p>
             {{form.username.label}}

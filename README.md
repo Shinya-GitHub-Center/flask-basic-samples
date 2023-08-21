@@ -34,11 +34,17 @@ $ flask db upgrade
 3. You should check how the table & columns has been created inside the `database.db` file. The easiest way is just install 'SQLite3 Editor' extension via VSCode, then click `database.db` file from the VSCode explorer (I included VSCode recommendation using `extensions.json`)
 - You can change to 'posted' table from 'SELECT * FROM' section, where you can see the 4 columns - id, title, contents, and create_at
 
-## Post to your blog
+## Post articles
 1. After activation of the flask app server with `flask run` command, please access to `http://127.0.0.1:5000/admincreate` via your browser
 2. Please fill out 'Admin Name' and 'Password' then click Login (you can check both values at the file `/app/settings.py`)
 3. Fill out the Title and Content, then click Post
 4. Now you can check if your post has been created into the database, just click `database.db` from VSCode explorer and switch to the 'posted table'
+
+## Delete articles
+1. After activation of the flask app server with `flask run` command, please access to `http://127.0.0.1:5000/admindelete` via your browser
+2. Please fill out 'Admin Name' and 'Password' then click Login (you can check both values at the file `/app/settings.py`)
+3. Click 'Delete' on the target article to delete the post
+4. Now you can check if your post has been removed from the database, just click `database.db` from VSCode explorer and switch to the 'posted table'
 
 ## To finish today's your flask development
 ```
