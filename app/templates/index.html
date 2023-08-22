@@ -1,8 +1,45 @@
 {% extends 'layout.html' %}
 
-{% block content %}
-    <h1>Hello Flask Successfully Initiated...</h1>
-        <h2>Welcome to the {{ name }} page!!</h2>
-        <p><input type="button" value="Button" onclick="onButtonClick()" /></p>
-        <p><span id="pushButton">0</span></p>
+{% block title %}Flask Blog{% endblock %}
+
+{% block header %}
+<header class="masthead" style="background-image: url('static/images/about-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Flask Blog</h1>
+                    <span class="subheading">
+                        A Blog Theme by Start Bootstrap</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block contents %}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            {% for entry in rows %}
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">{{entry.title}}</h2>
+                    <h5 class="post-subtitle">{{entry.contents|truncate(80)}}</h5>
+                </a>
+                <p class="post-meta">
+                    <a href="#">Flask blog</a>
+                    Posted on {{entry.create_at}}
+                </p>
+            </div>
+            <hr class="my-4" />
+            {% endfor %}
+            <div class="d-flex justify-content-end mb-4">
+                <a class="btn btn-primary text-uppercase" href="#!">Older Posts →
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
