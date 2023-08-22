@@ -66,7 +66,7 @@ def login_del():
     return render_template('login_delete.html', form=form)
 
 
-@crud.route('/delete', methods=['GET', 'POST'])
+@crud.route('/deleting', methods=['GET', 'POST'])
 def delete_entry():
     if not session.get('logged_in'):
         return redirect(url_for('crud.login_del'))
@@ -75,7 +75,7 @@ def delete_entry():
     return render_template('delete.html', entries=entries)
 
 
-@crud.route('/delete/<int:id>')
+@crud.route('/deleting/<int:id>')
 def delete(id):
     entry = db.session.get(models.Blogpost, id)
     db.session.delete(entry)
