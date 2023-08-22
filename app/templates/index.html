@@ -24,7 +24,7 @@
         <div class="col-md-10 col-lg-8 col-xl-7">
             {% for entry in rows %}
             <div class="post-preview">
-                <a href="post.html">
+                <a href="{{ url_for('show_entry', id=entry.id) }}">
                     <h2 class="post-title">{{entry.title}}</h2>
                     <h5 class="post-subtitle">{{entry.contents|truncate(80)}}</h5>
                 </a>
@@ -36,8 +36,10 @@
             <hr class="my-4" />
             {% endfor %}
             <div class="d-flex justify-content-end mb-4">
-                <a class="btn btn-primary text-uppercase" href="#!">Older Posts →
-                </a>
+                {{ pagination.info }}
+            </div>
+            <div class="d-flex justify-content-end mb-4">
+                {{ pagination.links }}
             </div>
         </div>
     </div>

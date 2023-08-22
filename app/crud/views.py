@@ -32,7 +32,7 @@ def login():
     return render_template('login.html', form=form)
 
 
-@crud.route('/post', methods=['GET', 'POST'])
+@crud.route('/posting', methods=['GET', 'POST'])
 def article():
     if not session.get('logged_in'):
         return redirect(url_for('crud.login'))
@@ -49,7 +49,7 @@ def article():
         session.pop('logged_in', None)
         return redirect(url_for('crud.login'))
 
-    return render_template('post.html', form=form_art)
+    return render_template('post_add.html', form=form_art)
 
 
 @crud.route('/admindelete', methods=['GET', 'POST'])
